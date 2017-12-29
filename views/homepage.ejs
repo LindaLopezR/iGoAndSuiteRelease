@@ -6,33 +6,21 @@
         <p class="text-small">Descripción de actualizaciones, cambios y novedades en las aplicaciones de iGo&#38;Suite</p>
       </div>
     </div>
-    <div class="item">
-        <div>
-          <h3 class="subtitle-date">Noviembre, 2017</h3>
-          <hr>
-          <div class="">
-            <h3>Titulo de la actualización</h3>
-            <p>Descripción de la actualización</p>
-          </div>
-          <div class="">
-            <h3>Titulo de la actualización</h3>
-            <p>Descripción de la actualización</p>
-          </div>
-        </div>
-        <div>
-          <h3 class="subtitle-date">Fecha de actualización</h3>
-          <hr>
-          <p>Descripción de la actualización</p>
-        </div>
-        <div>
-          <h3 class="subtitle-date">Fecha de actualización</h3>
-          <hr>
-          <p>Descripción de la actualización</p>
-        </div>
-        <div>
-          <h3 class="subtitle-date">Fecha de actualización</h3>
-          <hr>
-          <p>Descripción de la actualización</p>
-        </div>
+
+    <div class="item tab_container">
+      <div class="ui top attached tabular menu">
+        <a class="item active" data-tab="first">iGo&#38;See Desktop</a>
+        <a class="item" data-tab="second">iGo&#38;See Movil</a>
+        <a class="item" data-tab="third">iGo&#38;Tag Movil</a>
+      </div>
+      <div class="ui bottom attached tab segment active" data-tab="first">
+        <% include /releaseiGoSeeDesktop %>
+      </div>
+      <div class="ui bottom attached tab segment" data-tab="second">
+        <% include /releaseiGoSeeMovil %>
+      </div>
+      <div class="ui bottom attached tab segment" data-tab="third">
+        <% include /releaseiGoTagMovil %>
+      </div>
     </div>
   </div>
