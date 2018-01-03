@@ -1,4 +1,4 @@
 module.exports.routes = {
-  'get /updatesiGoSuite' : {view: 'homepage'},
+  '/' : {view: 'homepage'},
   'get /notfound': {response: 'notFound'},
 };
