@@ -32,6 +32,32 @@ body {
   width: 70%;
 }
 // TABS
-.tab_container {
+.tab-container {
   width: 92%;
+}
+.release {
+  margin-bottom: 3%;
+}
+.separator-container {
+	text-align: center;
+	position: relative;
+}
+.line-update{
+	margin: 0 auto 1em;
+	color: @azulMarino;
+	width: 11em;
+}
+.line-update:after {
+	float: right;
+}
+.line-update:before {
+	float: left;
+}
+.line-update:before,
+.line-update:after {
+	content: " ";
+	border: 1px solid @azulMarino;
+	margin-top: 14px;
+	display: block;
+	width: 40%;
 }

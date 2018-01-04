@@ -1,3 +1,5 @@
+@import '../variables/colors.less';
+
 .ui.tab{display:none}.ui.tab.active,.ui.tab.open{display:block}.ui.tab.loading{position:relative;overflow:hidden;display:block;min-height:250px}.ui.tab.loading *{position:relative!important;left:-10000px!important}.ui.tab.loading.segment:before,.ui.tab.loading:before{position:absolute;content:'';top:100px;left:50%;margin:-1.25em 0 0 -1.25em;width:2.5em;height:2.5em;border-radius:500rem;border:.2em solid rgba(0,0,0,.1)}.ui.tab.loading.segment:after,.ui.tab.loading:after{position:absolute;content:'';top:100px;left:50%;margin:-1.25em 0 0 -1.25em;width:2.5em;height:2.5em;-webkit-animation:button-spin .6s linear;animation:button-spin .6s linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;border-radius:500rem;border-color:#767676 transparent transparent;border-style:solid;border-width:.2em;box-shadow:0 0 0 1px transparent}
 
 .ui[class*="top attached"].menu {
@@ -20,14 +22,14 @@
   border-right: 1px solid transparent;
   border-top: 2px solid transparent;
   padding: .92857143em 1.42857143em;
-  color: rgba(0,0,0,.87);
+  color: @grisSuave;
 }
 .ui.top.attached.menu>.item:first-child {
   border-radius: .28571429rem 0 0 0;
 }
 .ui.tabular.menu .active.item {
   background: none #fff;
-  color: rgba(0,0,0,.95);
+  color: @azulMarino;
   border-top-width: 1px;
   border-color: #d4d4d5;
   font-weight: 700;
