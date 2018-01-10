@@ -14,13 +14,13 @@
         <a class="item" data-tab="third">iGo&#38;Tag Movil</a>
       </div>
       <div class="ui bottom attached tab segment active" data-tab="first">
-        <% include /releases/releaseiGoSeeDesktop %>
+        <%- partial ('./releases/releaseiGoSeeDesktop.ejs', {commits : commitsGoAndSeeWeb}) %>
       </div>
       <div class="ui bottom attached tab segment" data-tab="second">
-        <% include /releases/releaseiGoSeeMovil %>
+        <%- partial ('./releases/releaseiGoSeeDesktop.ejs', {commits : commitsGoAndSee}) %>
       </div>
       <div class="ui bottom attached tab segment" data-tab="third">
-        <% include /releases/releaseiGoTagMovil %>
+        <%- partial ('./releases/releaseiGoSeeDesktop.ejs', {commits : commitsGoAndTag}) %>
       </div>
     </div>
   </div>
