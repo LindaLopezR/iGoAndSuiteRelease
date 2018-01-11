@@ -9,18 +9,24 @@
 
     <div class="item tab-container">
       <div class="ui top attached tabular menu">
-        <a class="item active" data-tab="first">iGo&#38;See Desktop</a>
-        <a class="item" data-tab="second">iGo&#38;See Movil</a>
-        <a class="item" data-tab="third">iGo&#38;Tag Movil</a>
+        <a class="item active" data-tab="first">
+          <img class="img-tab-see" src="/images/logo-suite-color.png" alt="iGo&See Desktop">
+        </a>
+        <a class="item" data-tab="second">
+          <img class="img-tab-seemovil" src="/images/igoandseeHorizontalGris.png" alt="iGo&See Movil">
+        </a>
+        <a class="item" data-tab="third">
+          <img src="/images/igoandtagHorizontalGris.png" alt="iGo&Tag Movil">
+        </a>
       </div>
       <div class="ui bottom attached tab segment active" data-tab="first">
         <%- partial ('./releases/releaseiGoSeeDesktop.ejs', {commits : commitsGoAndSeeWeb}) %>
       </div>
       <div class="ui bottom attached tab segment" data-tab="second">
-        <%- partial ('./releases/releaseiGoSeeDesktop.ejs', {commits : commitsGoAndSee}) %>
+        <%- partial ('./releases/releaseiGoSeeMovil.ejs', {commits : commitsGoAndSee}) %>
       </div>
       <div class="ui bottom attached tab segment" data-tab="third">
-        <%- partial ('./releases/releaseiGoSeeDesktop.ejs', {commits : commitsGoAndTag}) %>
+        <%- partial ('./releases/releaseiGoTagMovil.ejs', {commits : commitsGoAndTag}) %>
       </div>
     </div>
   </div>

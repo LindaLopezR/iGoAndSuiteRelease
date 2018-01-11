@@ -7,27 +7,28 @@
 
 module.exports = {
 
-	doWebhook(req, res) {
+	docommit(req, res) {
 
 		const data = req.body;
-		// console.log(data);
-		let webhook = {
-			name : data.repository.name,
-			date : data.repository.updated_at,
+		console.log(data);
+		let commit = {
+			name : data.commits[0].message,
+			date : data.commits[0].timestamp,
 			user : {
-				name : data.repository.owner.login,
-				avatar : data.repository.owner.avatar_url,
+				name : data.commits[0].committer.name,
 			},
-			message : '',
-			repository : data.repository.full_name,
+			message : data.commits[0].message,
+			repository : data.repository.name,
 		};
 
-		Webhook.create(data).exec(function(err, records) {
+		console.log(commit);
+
+		commit.create(commit).exec(function(err, records) {
 			if (err) {
 				console.log('Error ', err);
 			}
 			if (records) {
-				console.log('Records ', webhook);
+				console.log('Records ', records);
 			}
 		});
 		return res.json({});
@@ -40,11 +41,14 @@ module.exports = {
 				console.log('Error ', err);
 			}
 			if (res) {
-				console.log('Res ', response);
+				// console.log('Res ', response);
+				let commitsGoAndSee = response.filter( (commit) => commit.repository == 'iGoAndSeeReactNative' );
+				console.log('***********');
+				console.log('Ruta:', commitsGoAndSee);
 				return res.view('homepage', {
-					commitsGoAndSeeWeb : response,
-					commitsGoAndSee: response,
-					commitsGoAndTag : response
+					commitsGoAndSeeWeb : response.filter( (commit) => commit.repository == 'WebhookTester' ),
+					commitsGoAndSee: response.filter( (commit) => commit.repository == 'iGoAndSeeReactNative' ),
+					commitsGoAndTag : response.filter( (commit) => commit.repository == '' ),
 				})
 			}
 		});

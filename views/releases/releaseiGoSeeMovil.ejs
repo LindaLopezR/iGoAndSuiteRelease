@@ -1,1 +1,14 @@
-<h3 class="subtitle-date">Actualizaciones en nuestra aplicación movil iGo&#38;See</h3>
+<% _.each(commits, function (commit) { %>
+  <div class="separator-container">
+    <div class="line-update">∎</div>
+  </div>
+  <h3 class="subtitle-date">Actualización: <%= commit.message %></h3>
+  <div class="row-content">
+    <div>
+      <h3 class="subtitle-update"><%= commit.date %></h3>
+    </div>
+    <div>
+      <h3 class="subtitle-update"><%= commit.user.name %></h3>
+    </div>
+  </div>
+<% }); %>
